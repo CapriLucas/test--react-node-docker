@@ -14,12 +14,11 @@ export default function Home(props) {
 }
 
 export async function getStaticProps() {
-  let res = await fetch(`http://localhost:5000/sahara`);
+  let res = await fetch(`http://test:5000/sahara`);
   let message = await res.json();
-
   return {
     props: {
-      message
+      message: "Hola"
     }
   }
 }
