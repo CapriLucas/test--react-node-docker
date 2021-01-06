@@ -18,7 +18,7 @@ export async function getStaticProps() {
   let message = await res.json();
   return {
     props: {
-      message: "Hola"
+      message
     }
   }
 }
