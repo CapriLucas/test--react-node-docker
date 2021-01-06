@@ -6,10 +6,10 @@ WORKDIR /app
 
 # install app dependencies
 COPY package*.json ./
+RUN npm install
 COPY ./src ./src
 EXPOSE 5000
 ENV PATH /src/node_modules/.bin:$PATH
-RUN npm install
 
 # start app
 

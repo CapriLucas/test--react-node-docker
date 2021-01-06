@@ -2,6 +2,6 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/sahara',(req,res)=>{
-    res.json("ALE PUTO");
+    res.json("Falklands islands");
 });
 module.exports = router;
