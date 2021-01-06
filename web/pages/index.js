@@ -13,7 +13,7 @@ export default function Home(props) {
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   let res = await fetch(`http://test:5000/sahara`);
   let message = await res.json();
   return {
