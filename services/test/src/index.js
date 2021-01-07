@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 
+const pool = require("./db/connection");
 const ROUTES = require('./routes/index.routes.js');
 
 const PORT = process.env.PORT || 5000;

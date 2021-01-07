@@ -10,6 +10,15 @@ services:
       - "5000:5000"
     environment:
       - PORT=5000
+      - DATABASE_URL=postgres://admin:admin@test-db:5432/api_docker_messages
+  test-db:
+    container_name: test-db
+    build: ./services/test/src/db
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
   web:
     container_name: web
     build: ./web/
